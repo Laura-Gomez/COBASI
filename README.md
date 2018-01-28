@@ -13,7 +13,7 @@
 
 - **Data**:			      All data required for the COBASI pipeline and all data generated for the COBASI pipeline
     * Data/Sequence:		Fastq or fasta file for the sequencing raw reads
-    * Data/Reference:		Fasta files for Reference Genome (RG)
+    * Data/Reference:		The reference sequences can be downloaded from: http://hgdownload.cse.ucsc.edu/goldenpath/hg38/bigZips/
     * Data/CS-Ref:		   CS regions obtained from the RG
     * Data/Analysis:		Results for the COBASI One Individual Framework and the bash script
     * Data/Analysis-TRIO:	Results for the COBASI One Family-based Framework and the bash script
