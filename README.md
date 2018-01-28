@@ -29,4 +29,8 @@ To re-run the example data:
 - Run the analysis in the Analysis-TRIO directory
 
 Each bash script should not be run automatically, there are some steps that can be run in parallel, read user manual
+
 Read User Manual to understand the parameters
+
+Some intermediary files were not uploaded into the repository because they are too big (coverage and landscape files)
+
