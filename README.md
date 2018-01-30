@@ -1,6 +1,6 @@
 # COBASI
 
-### COBASI allows the accurate identification of de novo Single Nucleotide Variants from sequencing data. 
+### COBASI allows the accurate identification of *de novo* Single Nucleotide Variants from sequencing data. 
 
 #### REPOSITORY CONTENT:
 
