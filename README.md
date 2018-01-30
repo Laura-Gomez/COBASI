@@ -10,7 +10,7 @@
 - **Bin**:			         All scripts required for the COBASI pipeline
     * Bin/One_Individual:	All scripts required for COBASI One Individual Framework
     * Bin/Novo:		         All scripts required for COBASI Family-based framework
-    * Bin/CS_Database:	   All scripts required to generate the CS regions. The usage of this scipts is describe in the User Manual. No bash bash scripts to complete this step are provided.
+    * Bin/CS_Database:	   All scripts required to generate the CS regions (see the the User Manual, no bash script to complete this step is provided)
     * Bin/Extra:		      Post and pre-processing scripts\n
 
 - **Data**:			      All data required for the COBASI pipeline and all data generated for the COBASI pipeline
