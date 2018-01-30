@@ -4,7 +4,7 @@
 
 #### REPOSITORY CONTENT:
 
-- **UserManual_v5.1.docx**	COBAIS User Manual
+- **UserManual_v5.1.pdf**	COBAIS User Manual
 - **readme.sh** Bash script to run the One-Individual discovery pipeline
 - **readme-trio.sh** Bash script to run the De novo discovery pipeline (Family-Based Framework)
 - **Bin**:			         All scripts required for the COBASI pipeline
