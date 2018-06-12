@@ -49,7 +49,7 @@ my $cont = 0;
 my (@before, @start, @end, @after, @line, @prev, @median, @median_sort, @nmedian);
 my ($coin, $read, $max, $factor, $factor_abs, $cont_coin, $fac_st, $fac_end, $nt, $cs_ratio, $mediana, $size, $nmedian_ref, $class);
 
-GetOptions(\%opts, 'h', "land=s", "fac=f", "rmin=i", "max=i", "fst=i", "var=s", "nt=s", "density=f" );
+GetOptions(\%opts, 'h', "land=s", "fac=f", "rmin=i", "max=i", "fst=i", "out=s", "nt=s", "density=f" );
 
 my $help = "USAGE:
 	perl Get_Onedrop.pl -land FILE.LAND -max M -fac RCI -rmin R -fst FST -nt NT –density DEN –out FILE.ONEDROP\n
@@ -82,7 +82,7 @@ die $help if $opts{h};
 
 print "$opts{'land'}\n";
 open(LN, "$opts{'land'}");
-open(VAR, ">$opts{'var'}");
+open(VAR, ">$opts{'out'}");
 
 
 #### OPEN LANDSCAPE FILE PER CHROMOSOME
