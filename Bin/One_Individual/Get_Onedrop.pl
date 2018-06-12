@@ -6,7 +6,7 @@
 # It only looks for the internal drop and rise in coverage characteristics of any VSR. 
 #
 #         COMMAND LINE.
-#   perl Get_Onedrop.pl -land VL.LAND -max M -fac RCI -rmin R -fst FST -nt NT –density DEN –var chr1.var
+#   perl Get_Onedrop.pl -land FILE.LAND -max M -fac RCI -rmin R -fst FST -nt NT –density DEN –out FILE.ONEDROP
 #
 # PARAMETERS.
 #	land		Input file. VL file
@@ -16,7 +16,7 @@
 #	fst		The median of the coverage values for InterCS’s must be lower than FST (SET FST=third quartile coverage+10(IQR))
 #	nt		The length of the VSR must be longer than NT
 #	density	DEN is the mínimum density of CSs required inside the VSR 
-#	var		Output file
+#	out		Output file
 #
 # OUTPUT.
 # The output file contains either whole VSRs or partial VSRs (only the internal drop and rise). In this step, the PrevCS and PostCS will be the ones before and after this (possibly incomplete) VSR signal. These regions will be extended, if possible, in the next process. This output file is composed of 13 columns:
