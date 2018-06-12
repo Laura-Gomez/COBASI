@@ -35,3 +35,6 @@ Each bash script should not be run automatically, there are some steps that can 
 Read User Manual to understand the parameters for every script
 Some intermediary files were not uploaded into the repository because they are too big (coverage and landscape files)
 
+**NOTE**
+To recompile the Align_Read_RG.cc, use the following command line:  
+*g++ -std=c++0x Align_Read_RG.cc align.cc -o Align_Read_RG*
