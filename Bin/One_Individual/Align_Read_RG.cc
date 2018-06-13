@@ -9,38 +9,45 @@
 // Alleles per base (reference  or alternative) are obtained, no gaps are allowed.
 // FOR MORE INFORMATION SEE USE MANUAL
 //
+// COMMAND LINE
+// 				Align_read_RG –a READALN-file –r REFDIR/ -s sufixREF –k k –t ReadRegion 
+//				–p ReadPerbase –l LengthPartial –c ChildSNV –d RemoveDupFlag –i Ind –o out.total
+//								 –q out.perbase
 //
-//            COMMAND LINE.
-// Align_read_RG.out READALN-file REFDIR/ sufixREF k ReadRegion ReadPerbase ChildSNV RemoveDupFlag Ind out.total out.perbase
-// 
 // ONE INDIVIDUAL SNV DISCOVERY PARAMETERS
-//  PARAMETERS.
-//	READALN-FILE 	File per chromosome that contains information about the alignment between the read and the respective Signature CS’s
-//	REFDIR 			RG directory path
-//	sufixREF 		Sufix of the fasta reference files
-//	k 				CSs size = Jellyfish database kmer size
-//	ReadRegion 		Each mismatch region between the reads and the RG must be supported by at least ReadRegion different reads
-//	ReadPerbase 	Each mismatch nucleotide between the reads and the RG must be supported by at least ReadPerbase different reads
-//	LengthPartial		Length of extension of partial  alignment (set to 10)
-//	ChildSNV		Set to NA (Parameter used in family-framework)
-//	RemoveDupFlag	Set to TRUE to remove PCR duplicates (FALSE otherwise)
-//	Ind				For one individual SNV discovery set to CHILD
-//	out.total 		Output file with regions of polymorphism data
-//	out.perbase 	Output file with single nucleotide polymorphism data
+//
+//	a [READALN-FILE] 	File per chromosome that contains information about the 
+//			alignment between the read and the respective Signature CS’s
+//	r [REFDIR] 		RG directory path
+//	s [sufixREF] 		Sufix of the fasta reference files
+//	k [k] 			CSs size = Jellyfish database kmer size
+//	t [ReadRegion] 	Each mismatch region between the reads and the RG must 
+//					be supported by at least ReadRegion different reads
+//	p [ReadPerbase] 	Each mismatch nucleotide between the reads and the RG 
+//						must be supported by at least ReadPerbase different reads
+//	l [LengthPartial]	Length of extensión of partial  alignment (set to 10)
+//	c [ChildSNV]		Set to NA (Parameter used in family-framework)
+//	d [RemoveDupFlag]	Set to TRUE to remove PCR duplicates (FALSE otherwise)
+//	i [Ind]			For one individual SNV discovery set to CHILD
+//	o [out.total]		Output file with regions of polymorphism data
+//	q [out.perbase] 	Output file with single nucleotide polymorphism data
 //
 // FAMILY-BASED SNV DISCOVERY PARAMETERS
-//	READALN-FILE 	File per chromosome that contains information about the alignment between the read and the respective Signature CS’s
-//	REFDIR 		RG directory path
-//	sufixREF 		Sufix of the fasta reference files
-//	k 			CSs size = Jellyfish database kmer size
-//	ReadRegion 		Parameter used in One Individual SNV discovery(set to 1)
-//	ReadPerbase 		Each mismatch nucleotide between the reads and the RG must be supported by at least ReadPerbase different reads
-//      LengthPartial           Length of extension of partial  alignment (set to 5)
-//	ChildSNV		Path to variable regions file for child individual (out.total)
-//	RemoveDupFlag	Set to TRUE to remove PCR duplicates (FALSE otherwise)
-//	Ind			For parent discovery in the family-based framework set to PARENT
-//	out.total 		Set to NA (Parameter used in one-individual discovery)
-//	out.perbase 		Output file with single nucleotide polymorphism data
+//
+//	a [READALN-FILE ]	File per chromosome that contains information about the 
+//			alignment between the read and the respective Signature CS’s
+//	r [REFDIR]		RG directory path
+//	a [sufixREF] 		Sufix of the fasta reference files
+//	k [k ]			CSs size = Jellyfish database kmer size
+//	t [ReadRegion]	Parameter used in One Individual SNV discovery(set to 1)
+//	p [ReadPerbase ]	Each mismatch nucleotide between the reads and the RG 
+//						must be supported by at least ReadPerbase different reads
+//	l [LengthPartial]	Length of extensión of partial  alignment (set to 10)
+//	c [ChildSNV]		Path to variable regions file for child individual (out.total)
+//	d [RemoveDupFlag]	Set to TRUE to remove PCR duplicates (FALSE otherwise)
+//	i [Ind]			Set to PARENT for SNV discovery in the parents
+//	o [out.total] 		Set to NA for SNV discovery in the parents
+//	q [out.perbase]	Output file with single nucleotide polymorphism data
 //
 //
 // FOR MORE INFORMATION ABOUT OUTPUT FILES SEE USER MANUAL
