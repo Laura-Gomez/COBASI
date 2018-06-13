@@ -987,7 +987,7 @@ int main(int argc, char *argv[])
   unsigned int dist_aln;
   string read_info_file, chr_dir, chr_sufix, subset_event_file, flag_el_duplicate, flag_ind, out_total, out_perbase;
 
- while ((c = getopt (argc, argv, "ha:r:s:k:t:p:l:d:i:o:q:")) != -1)
+ while ((c = getopt (argc, argv, "ha:r:s:k:t:p:l:c:d:i:o:q:")) != -1)
   {
    switch(c)
  {
