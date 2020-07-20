@@ -1,0 +1,101 @@
+
+
+# THIS INSTALLATION GUIDE WILL GUIDE YOU TO INSTALL AMOS LOCALLY.
+
+# THE INSTALLATION DIRECTORY WILL BE:
+# /home/$USER
+
+# THE SOURCE CODE DIRECTORY WILL BE:
+# /home/$USER/bin
+
+#THE EXECUTABLES DIRECTORY WILL BE:
+# /home/$USER/pkg
+
+
+##### ALL AMOS DEPENDENCIES MUST BE IN THE PATH
+##### /home/$USER/ MUST BE IN THE PATH
+
+##### JELLYFISH INSTALLATION
+
+cd /home/$USER/pkg
+wget https://github.com/gmarcais/Jellyfish/archive/v1.1.12.tar.gz
+tar xvf jellyfish-1.1.12.tar.gz
+cd jellyfish-1.1.12/
+./configure --prefix=/home/$USER/
+make
+make install
+
+
+##### SHELL TCSH INSTALLATION
+##### CSH IS AN AMOS DEPENDECNY BUT IT IS NOT LONGER SUPPORTED
+##### TCSH WILL BE INSTALLED AND WILL BE REFERENCED IS CSH
+
+cd /home/$USER/pkg
+wget https://astron.com/pub/tcsh/tcsh-6.22.02.tar.gz
+tar xvf tcsh-6.22.02.tar.gz
+cd tcsh-6.22.02/
+./configure --prefix=/home/$USER/
+make
+make install
+cd /home/$USER/bin/
+ln -s tcsh csh
+
+
+##### MUMmer 3.23 INSTALLATION
+##### GO TO https://sourceforge.net/projects/mummer/
+##### DOWNLOAD MUMmer3.23.tar.gz AND SAVE IT IN /home/$USER/pkg
+
+cd /labs/genut/pkg
+tar xvf MUMmer3.23.tar.gz
+cd MUMmer3.23/
+make check
+make
+
+#### IF THE DEPENDENCIES ARE COMPLETE, make check SHOULD RETURN NO ERROR MESSAGES
+#### ALL MUMMER BINARIES MUST BE ADDED TO /home/$USER/bin
+
+cd /home/$USER/bin/
+ln -s /home/$USER/pkg/MUMmer3.23/mummer .
+ln -s /home/$USER/pkg/MUMmer3.23/nucmer .
+ln -s /home/$USER/pkg/MUMmer3.23/promer  .
+ln -s /home/$USER/pkg/MUMmer3.23/run-mummer1  .
+ln -s /home/$USER/pkg/MUMmer3.23/run-mummer3  .
+ln -s /home/$USER/pkg/MUMmer3.23/delta-filter .
+ln -s /home/$USER/pkg/MUMmer3.23/show-coords .
+
+
+#### Statistics::Descriptive Perl library INSTALLATION
+
+# IF PERL IS LOCALLY INSTALLED: 
+
+curl -sL https://cpanmin.us | /home/$USER/perl/perl-5.30.1/bin/perl - --notest -l /home/$USER/perl/perl-5.30.1 Statistics::Descriptive
+
+# OTHERWISE, INSTALL USING CPAN AS NORMALLY
+
+
+#### THE INSTALLATION OF QT4 IS NOT COVERED IN THIS GUIDE, SINCE THE GRAPHIC INTERFACE IS NOT REQUIRED TO RUN kmer-cov-plot 
+
+
+#### AMOS INSTALLATION
+#### DOWNLOAD AMOS FROM https://sourceforge.net/projects/amos/ INTO /home/$USER/pkg
+
+cd /labs/genut/pkg
+tar xvf amos-3.1.0.tar.gz
+cd amos-3.1.0/
+./bootstrap
+./configure --prefix=/labs/genut/
+make check
+
+#### IF THE DEPENDENCIES ARE COMPLETE, make check SHOULD RETURN NO ERROR MESSAGES
+
+#### A COMMON REPORTED ERROR:
+
+# find-tandem.cc:243:3: error: ‘optarg’ was not declared in this scope
+#   optarg = NULL;
+
+# ADD #include <getopt.h> 
+# TO THE START OF amos-3.1.0/src/Align/find-tandem.cc
+
+make
+make install
+
